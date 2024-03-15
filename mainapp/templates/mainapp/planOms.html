@@ -7,10 +7,19 @@
 
 
 <form method="POST">
-
     {% csrf_token %}
+    
 <div class="container"><div class="row"><div class="col-md-8 col-md-offset-2">
-<h2 class="text-center">Bootstrap INPUT Maxlength</h2>
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Выбр данных
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="#">Фактическое</a></li>
+          <li><a class="dropdown-item" href="#">Плановое</a></li>          
+        </ul>
+      </div>
+<h2 class="text-center">ОМС</h2>
 
 <div class="form-group">
 <div><p>КДО</p></div>

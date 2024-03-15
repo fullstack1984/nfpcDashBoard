@@ -12,3 +12,6 @@ class TablePageView(TemplateView):
 
 class PlanOmsPageView(TemplateView):
     template_name = "mainapp/planOms.html"
+
+    def post(self, request, *args, **kwargs):
+        pass
