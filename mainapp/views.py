@@ -4,3 +4,11 @@ from django.views.generic import TemplateView
 
 class MainPageView(TemplateView):
     template_name = "mainapp/index.html"
+
+
+class TablePageView(TemplateView):
+    template_name = "mainapp/tables.html"
+
+
+class PlanOmsPageView(TemplateView):
+    template_name = "mainapp/planOms.html"

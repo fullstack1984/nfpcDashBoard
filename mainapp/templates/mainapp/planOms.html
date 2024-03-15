@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+<script src="{% static 'js/bootstrap-input-maxlength.js' %}"></script>
+
+
+<form method="POST">
+
+    {% csrf_token %}
+<div class="container"><div class="row"><div class="col-md-8 col-md-offset-2">
+<h2 class="text-center">Bootstrap INPUT Maxlength</h2>
+
+<div class="form-group">
+<div><p>КДО</p></div>
+<div class="input-group">
+<input type="text" maxlength="3" class="form-control" />
+</div>
+</div>
+
+
+<div class="form-group">
+<div><p>ЖК</p></div>
+<div class="input-group">
+<input type="text" maxlength="3" class="form-control" />
+</div>
+</div>
+
+
+<div class="form-group">
+<div><p>ДСР женская</p></div>
+<div class="input-group">
+<input type="text" maxlength="3" class="form-control" />
+</div>
+</div>
+
+
+<div class="form-group">
+<div><p>Катамнез</p></div>
+<div class="input-group">
+<input type="text" maxlength="3" class="form-control" />
+</div>
+</div>
+<button type="submit" class="btn btn-primary btn-block">Сохранить</button>
+</p>
+</form>
+
+
+<script>
+$(document).ready(function() {
+$("input[maxlength]").maxlength();
+});
+</script>
+
+</div></div></div>
+{% endblock content %}
