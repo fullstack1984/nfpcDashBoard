@@ -10,21 +10,21 @@
     {% csrf_token %}
     
 <div class="container"><div class="row"><div class="col-md-8 col-md-offset-2">
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Выбр данных
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">Фактическое</a></li>
-          <li><a class="dropdown-item" href="{% url 'mainapp:planOms' %}">Плановое</a></li>          
-        </ul>
-      </div>
-<h2 class="text-center">План ОМС</h2>
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Выбр данных
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">Фактическое</a></li>
+      <li><a class="dropdown-item" href="{% url 'mainapp:planOms' %}">Плановое</a></li>          
+    </ul>
+  </div>
+<h2 class="text-center">ОМС</h2>
 
 <div class="form-group">
 <div><p>КДО</p></div>
 <div class="input-group">
-<input type="text" maxlength="3" class="form-control" />
+<input type="text" maxlength="3" class="form-control" name='kdo'/>
 </div>
 </div>
 
@@ -32,7 +32,7 @@
 <div class="form-group">
 <div><p>ЖК</p></div>
 <div class="input-group">
-<input type="text" maxlength="3" class="form-control" />
+<input type="text" maxlength="3" class="form-control" name='jk' />
 </div>
 </div>
 
