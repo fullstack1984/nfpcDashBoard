@@ -21,6 +21,6 @@ class PlanOms(models.Model):
         my_data = PlanOms.objects.filter(name_department=argum)
         my_list = []
         for i in my_data:
-            if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y'):                
+            if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y') and i.name_data == 'dataOms':                
                 my_list.append(i.values_data)
         return my_list[len(my_list) - 1]
