@@ -17,10 +17,10 @@ class PlanOms(models.Model):
 
 
     @staticmethod
-    def get_values_to_db(argum):
-        my_data = PlanOms.objects.filter(name_department=argum)
+    def get_values_to_db_data(name_dep, name_dat='dataOms'):
+        my_data = PlanOms.objects.filter(name_department=name_dep)
         my_list = []
         for i in my_data:
-            if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y') and i.name_data == 'dataOms':                
+            if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y') and i.name_data == name_dat:                
                 my_list.append(i.values_data)
         return my_list[len(my_list) - 1]

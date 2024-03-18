@@ -15,8 +15,8 @@ class TablePageView(TemplateView):
     def get_context_data(self, **kwargs):        
         context = super().get_context_data(**kwargs)
 
-        context["jk_data_now"] = models.PlanOms.get_values_to_db('jk')
-        context["kdo_data_now"] = models.PlanOms.get_values_to_db('kdo')
+        context["jk_data_now"] = models.PlanOms.get_values_to_db_data('jk')
+        context["kdo_data_now"] = models.PlanOms.get_values_to_db_data('kdo')
         
         return context
 
