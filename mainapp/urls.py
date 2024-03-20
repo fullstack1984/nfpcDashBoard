@@ -9,4 +9,6 @@ urlpatterns = [
     path("tables/", views.TablePageView.as_view(), name='tables'),
     path("planOms/", views.PlanOmsPageView.as_view(), name='planOms'),
     path('dataOms/', views.DataOmsPageView.as_view(), name='dataOms'),
+    path("dataPlat/", views.DataPlatPageView.as_view(), name='dataPlat'),
+    path("planPlat/", views.PlanPlatPageView.as_view(), name='planPlat'),
 ]
