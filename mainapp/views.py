@@ -115,3 +115,6 @@ class DataPlatPageView(TemplateView):
                 )
         data_db.save()
         return HttpResponseRedirect(reverse_lazy("mainapp:dataPlat"))
+
+class DataVmpPageView(TemplateView):
+    template_name = "mainapp/dataVmp.html"

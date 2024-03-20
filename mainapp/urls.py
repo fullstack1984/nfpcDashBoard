@@ -11,4 +11,5 @@ urlpatterns = [
     path('dataOms/', views.DataOmsPageView.as_view(), name='dataOms'),
     path("dataPlat/", views.DataPlatPageView.as_view(), name='dataPlat'),
     path("planPlat/", views.PlanPlatPageView.as_view(), name='planPlat'),
+    path("dataVmp/", views.DataVmpPageView.as_view(), name='dataVmp'),
 ]

@@ -23,7 +23,10 @@ class ModelOms(models.Model):
         for i in my_data:
             if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y') and i.name_data == name_dat:                
                 my_list.append(i.values_data)
-        return my_list[len(my_list) - 1]
+        if len(my_list) != 0: 
+            return my_list[len(my_list) - 1]
+        else:
+            return 0
 
 
 class ModelPlat(models.Model):
@@ -47,4 +50,8 @@ class ModelPlat(models.Model):
         for i in my_data:
             if i.date_create.strftime('%m/%d/%Y') == date.today().strftime('%m/%d/%Y') and i.name_data == name_dat:                
                 my_list.append(i.values_data)
-        return my_list[len(my_list) - 1]
+        
+        if len(my_list) != 0:
+            return my_list[len(my_list) - 1]
+        else:
+            return 0

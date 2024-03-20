@@ -15,11 +15,12 @@
           Выбр данных
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">Фактическое</a></li>
-          <li><a class="dropdown-item" href="{% url 'mainapp:planOms' %}">Плановое</a></li>          
+          <li><a class="dropdown-item" href="{% url 'mainapp:dataPlat' %}">Фактическое</a></li>
+          <li><a class="dropdown-item" href="{% url 'mainapp:planPlat' %}">Плановое</a></li>          
         </ul>
       </div>
-<h2 class="text-center">План ОМС</h2>
+<h2 class="text-center">План Платные</h2>
+
 
 {% include 'includes/menuData.html' %}
 

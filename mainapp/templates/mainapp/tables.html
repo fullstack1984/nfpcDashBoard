@@ -61,7 +61,12 @@
 		<tr>
 			<td>1</td>
 			<td>КДО</td>
-			<td>{{ kdo_data_now }}</td>
+			<td>{% if kdo_data_now == 0 %}
+				-
+				{% else %}
+				{{ kdo_data_now }}
+				{% endif %}
+			</td>
 			<td>{{ kdo_data_plat }}</td>
 			<td></td>
 			<td></td>
