@@ -32,9 +32,9 @@
  Dropdown
  </a>
  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
- <a class="dropdown-item" href="#">План ОМС</a>
- <a class="dropdown-item" href="#">Another action</a>
- <a class="dropdown-item" href="#">План ОМС</a>
+ <a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">ОМС</a>
+ <a class="dropdown-item" href="{% url 'mainapp:dataPlat' %}">Платные</a>
+ <a class="dropdown-item" href="{% url 'mainapp:dataVmp' %}">ВМП</a>
  <div class="dropdown-divider"></div>
  <a class="dropdown-item" href="#">Something else here</a>
  </div>

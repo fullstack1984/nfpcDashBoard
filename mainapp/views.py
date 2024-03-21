@@ -118,3 +118,45 @@ class DataPlatPageView(TemplateView):
 
 class DataVmpPageView(TemplateView):
     template_name = "mainapp/dataVmp.html"
+    
+    def post(self, request, *args, **kwargs):
+        list_otd = ['kdo', 'jk', 'dsr_w', 'katamnez', 'dsr_ch', 'ot_fu_di', 'olmrd', 'vrt', 'prim_otd', 'aopb_1', 'aopb_2', 'rod_otd', 'rod_otd_1', 'afonion', 'oar', 'oritn', 'opnd', 'rkc', 'go', 'kdl']       
+        
+        for item in list_otd:
+            if request.POST.get(item) is not None:
+                data_db = models.ModelVmp.objects.create(
+                    name_department=item,             
+                    values_data=request.POST.get(item),
+                    name_data=request.path.split('/')[2]
+                )
+            else:
+                data_db = models.ModelVmp.objects.create(
+                    name_department=item,             
+                    values_data=0,
+                    name_data=request.path.split('/')[2]
+                )
+        data_db.save()
+        return HttpResponseRedirect(reverse_lazy("mainapp:dataVmp"))
+
+
+class PlanVmpPageView(TemplateView):
+    template_name = "mainapp/planVmp.html"
+    
+    def post(self, request, *args, **kwargs):
+        list_otd = ['kdo', 'jk', 'dsr_w', 'katamnez', 'dsr_ch', 'ot_fu_di', 'olmrd', 'vrt', 'prim_otd', 'aopb_1', 'aopb_2', 'rod_otd', 'rod_otd_1', 'afonion', 'oar', 'oritn', 'opnd', 'rkc', 'go', 'kdl']       
+        
+        for item in list_otd:
+            if request.POST.get(item) is not None:
+                data_db = models.ModelVmp.objects.create(
+                    name_department=item,             
+                    values_data=request.POST.get(item),
+                    name_data=request.path.split('/')[2]
+                )
+            else:
+                data_db = models.ModelVmp.objects.create(
+                    name_department=item,             
+                    values_data=0,
+                    name_data=request.path.split('/')[2]
+                )
+        data_db.save()
+        return HttpResponseRedirect(reverse_lazy("mainapp:dataVmp"))

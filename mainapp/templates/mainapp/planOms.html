@@ -5,27 +5,19 @@
 <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
 <script src="{% static 'js/bootstrap-input-maxlength.js' %}"></script>
 
-
-<form method="POST">
-    {% csrf_token %}
-    
-<div class="container"><div class="row"><div class="col-md-8 col-md-offset-2">
-    <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Выбр данных
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">Фактическое</a></li>
-          <li><a class="dropdown-item" href="{% url 'mainapp:planOms' %}">Плановое</a></li>          
-        </ul>
-      </div>
 <h2 class="text-center">План ОМС</h2>
-
+<div class="container">
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Выбр данных
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item" href="{% url 'mainapp:dataOms' %}">Фактическое</a></li>
+    <li><a class="dropdown-item" href="{% url 'mainapp:planOms' %}">Плановое</a></li>          
+  </ul>
+</div>
+</div>
 {% include 'includes/menuData.html' %}
-
-<button type="submit" class="btn btn-primary btn-block">Сохранить</button>
-</p>
-</form>
 
 
 <script>
@@ -34,5 +26,4 @@ $("input[maxlength]").maxlength();
 });
 </script>
 
-</div></div></div>
 {% endblock content %}

@@ -5,15 +5,15 @@
 <script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
 <script src="{% static 'js/bootstrap-input-maxlength.js' %}"></script>
 
-<h2 class="text-center">План ВМП</h2>
+<h2 class="text-center">Сданные карт</h2>
 <div class="container">
 <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Выбр данных
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="{% url 'mainapp:dataVmp' %}">Фактическое</a></li>
-    <li><a class="dropdown-item" href="{% url 'mainapp:planVmp' %}">Плановое</a></li>          
+    <li><a class="dropdown-item" href="{% url 'mainapp:dataVipis' %}">Фактическое</a></li>
+    <li><a class="dropdown-item" href="{% url 'mainapp:planVipis' %}">Плановое</a></li>          
   </ul>
 </div>
 </div>
