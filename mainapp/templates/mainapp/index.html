@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container p-4">
+	<h4>Link underline offset</h4>
+	<p><a class="link-offset-1" href="{% url 'mainapp:tables' %}">Таблица</a></p>
+	<p><a class="link-offset-1" href="{% url 'mainapp:dataOms' %}">ОМС</a></p>
+	<p><a class="link-offset-1" href="{% url 'mainapp:dataPlat' %}">Платные</a></p>
+	<p><a class="link-offset-1" href="{% url 'mainapp:dataVmp' %}">ВМП</a></p>
+	<p><a class="link-offset-1" href="#">Link offset - 3</a></p>
+	<p><a href="#">No offset</a></p>
+  </div>
+{% endblock content %}

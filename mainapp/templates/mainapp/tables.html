@@ -1,0 +1,491 @@
+{% extends 'base.html' %}
+{% block content %}
+<table class="iksweb">
+	<tbody>
+		<tr>
+			<td rowspan="3">№ п/п</td>
+			<td rowspan="3">Наименование отделения</td>
+			<td colspan="3">% Выполнение плана по направлениям на теущую дату		
+		</td>
+			<td colspan="3">АРХИВ		
+		</td>
+			<td colspan="4">Кадры			</td>
+			<td rowspan="3">11.Жалобы и обращения граждан
+
+</td>
+			<td rowspan="3">12.% Cутрудников с ЭЦП</td>
+			<td rowspan="3">13. Поликлиника (ЖК + Катамнез)
+</td>
+			<td colspan="4">рейтинг Поликлиника (ЖК+Катамнез)			</td>
+		</tr>
+		<tr>
+			<td rowspan="2">1. ОМС</td>
+			<td rowspan="2">2. ПЛАТНЫЕ</td>
+			<td rowspan="2">3.ВМП</td>
+			<td rowspan="2">4. Колличество выписанных пациентов</td>
+			<td rowspan="2">5. Сданные карт </td>
+			<td rowspan="2">6. Соотношение % </td>
+			<td colspan="2">Укомлектнованность	</td>
+			<td colspan="2">Категорийнность	</td>
+			<td rowspan="2">14. Доля врачей использующих ЭЦП</td>
+			<td rowspan="2">15. Доля подписанных ЭМД ЭЦП</td>
+			<td rowspan="2">16. Доля ТВСП передающих ЭМД по акушерству, гинекологии и неонатология</td>
+			<td rowspan="2">17. доля врачей уровня от которых зарегистрированы СЭМД в РЭМД</td>
+		</tr>
+		<tr>
+			<td>7. %Врачи</td>
+			<td>8.                %М/С</td>
+			<td>9. %Врачи</td>
+			<td>10.       % М/С</td>
+		</tr>
+		<tr>
+			<td colspan="2">Средний показатель по разделу	</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>КДО</td>
+			<td>{% if kdo_data_now == 0 %}
+				-
+				{% else %}
+				{{ kdo_data_now }}
+				{% endif %}
+			</td>
+			<td>{{ kdo_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>ЖК</td>
+			<td>{{ jk_data_now }}</td>
+			<td>{{ jk_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>ДСР женская</td>
+			<td>{{ dsr_w_data_now }}</td>
+			<td>{{ dsr_w_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Катамнез</td>
+			<td>{{ katamnez_data_now }}</td>
+			<td>{{ katamnez_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>ДСР детский</td>
+			<td>{{ dsr_ch_data_now }}</td>
+			<td>{{ dsr_ch_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Отделение функциональной диагностики</td>
+			<td>{{ ot_fu_di_data_now }}</td>
+			<td>{{ ot_fu_di_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>ОЛМРД</td>
+			<td>{{ olmrd_data_now }}</td>
+			<td>{{ olmrd_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>ВРТ</td>
+			<td>{{ vrt_data_now }}</td>
+			<td>{{ vrt_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>Приемное отделение </td>
+			<td>{{ prim_otd_data_now }}</td>
+			<td>{{ prim_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>10</td>
+			<td>АОПБ 1</td>
+			<td>{{ aopb_1_data_now }}</td>
+			<td>{{ aopb_1_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>11</td>
+			<td>АОПБ 2</td>
+			<td>{{ aopb_2_data_now }}</td>
+			<td>{{ aopb_2_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>12</td>
+			<td>Родовое отделение</td>
+			<td>{{ rod_otd_data_now }}</td>
+			<td rowspan="2">{{ rod_otd_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>13</td>
+			<td>Родовое отделение 1</td>
+			<td>{{ rod_otd_1_data_now }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>14</td>
+			<td>АФОиОН</td>
+			<td>{{ afonion_data_now }}</td>
+			<td>{{ afonion_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>15</td>
+			<td>ОАР</td>
+			<td>{{ oar_data_now }}</td>
+			<td>{{ oar_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td>ОРИТН</td>
+			<td>{{ oritn_data_now }}</td>
+			<td>{{ oritn_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>17</td>
+			<td>ОПНД</td>
+			<td>{{ opnd_data_now }}</td>
+			<td>{{ opnd_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>18</td>
+			<td>РКЦ</td>
+			<td>{{ rkc_data_now }}</td>
+			<td>{{ rkc_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>19</td>
+			<td>ГО</td>
+			<td>{{ go_data_now }}</td>
+			<td>{{ go_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>20</td>
+			<td>КДЛ</td>
+			<td>{{ kdl_data_now }}</td>
+			<td>{{ kdl_data_plat }}</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td colspan="9">ИТОГО средний балл</td>
+			<td colspan="10"></td>
+		</tr>
+	</tbody>
+</table>
+{% endblock content %}

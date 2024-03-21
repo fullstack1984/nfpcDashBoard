@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <title>
+        {% block title %}
+        Статистика Н-Ф ПЦ
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    {% include 'includes/main_menu.html' %}
+    <style>
+        *{background:url({% static 'img/bg-1.png' %})}
+    </style>
+    {% block content %}
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+    optio est esse? Veritatis laborum expedita
+    quibusdam numquam! Expedita amet nisi dolor similique autem, mollitia
+    ipsa et, natus vel explicabo
+    reprehenderit?
+
+    {% endblock content %}
+
+ <!-- Footer -->
+ <script src="{% static 'js/bootstrap.js' %}"></script>
+</body>
+</html>
