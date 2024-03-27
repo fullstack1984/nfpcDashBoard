@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.http.response import HttpResponseRedirect
 from django.urls import reverse_lazy
 from mainapp import models
+from mainapp.utils import matplo_data
 
 
 class MainPageView(TemplateView):
