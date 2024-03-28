@@ -13,4 +13,6 @@ urlpatterns = [
     path("planPlat/", views.PlanPlatPageView.as_view(), name='planPlat'),
     path("dataVmp/", views.DataVmpPageView.as_view(), name='dataVmp'),
     path("planVmp/", views.PlanVmpPageView.as_view(), name='planVmp'),
+    path("planVipis/", views.PlanVipisPageView.as_view(), name='planVipis'),
+    path("dataVipis/", views.DataVipisPageView.as_view(), name='dataVipis'),
 ]
